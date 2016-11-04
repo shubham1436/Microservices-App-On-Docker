@@ -18,13 +18,13 @@ cd microservices/support/turbine;                     ./gradlew clean build buil
 
 find . -name *SNAPSHOT.jar -exec du -h {} \;
 
-docker push shubham1436/ms-blog-discovery-server;
-docker push shubham1436/ms-blog-monitor-dashboard;
-docker push shubham1436/ms-blog-edge-server;
-docker push shubham1436/ms-blog-config-server;
-docker push shubham1436/ms-blog-auth-server;
-docker push shubham1436/ms-blog-product-composite-service;
-docker push shubham1436/ms-blog-review-service;
-docker push shubham1436/ms-blog-recommendation-service;
-docker push shubham1436/ms-blog-product-service;
-docker push shubham1436/ms-blog-turbine;
+docker push $1/ms-blog-discovery-server;
+docker push $1/ms-blog-monitor-dashboard;
+docker push $1/ms-blog-edge-server;
+docker push $1/ms-blog-config-server;
+docker push $1/ms-blog-auth-server;
+docker push $1/ms-blog-product-composite-service;
+docker push $1/ms-blog-review-service;
+docker push $1/ms-blog-recommendation-service;
+docker push $1/ms-blog-product-service;
+docker push $1/ms-blog-turbine;
