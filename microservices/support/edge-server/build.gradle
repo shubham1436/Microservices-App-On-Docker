@@ -78,11 +78,11 @@ task createDockerfile(type: Dockerfile) {
      entryPoint 'java','-Dspring.profiles.active=docker','-Djava.security.egd=file:/dev/./urandom','-jar',"${jar.baseName}-${jar.version}.jar"
 }
 
-task buildDockerImage(type: DockerBuildImage) {
-     dependsOn createDockerfile
-     inputDir = createDockerfile.destFile.parentFile
-     tag = "shubham1436/ms-blog-${jar.baseName}"
-}
+//task buildDockerImage(type: DockerBuildImage) {
+  //   dependsOn createDockerfile
+  //   inputDir = createDockerfile.destFile.parentFile
+  //   tag = "shubham1436/ms-blog-${jar.baseName}"
+//}
 
 eclipse {
      classpath {

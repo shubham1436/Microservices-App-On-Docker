@@ -4,7 +4,9 @@ FROM ofayau/ejre:8-jre
 
 EXPOSE 8888
 
+WORKDIR /app
+
 ADD ./build/libs/*.jar app.jar
 
 # Regarding settings of java.security.egd, see http://wiki.apache.org/tomcat/HowTo/FasterStartUp#Entropy_Source
-ENTRYPOINT ["java","-Dspring.profiles.active=docker","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=docker","-Djava.security.egd=file:/dev/./urandom","-jar","app.jar"]
